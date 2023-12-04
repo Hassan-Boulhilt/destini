@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Expanded(
-                flex: 5,
+                flex: 4,
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -70,9 +70,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.zero)),
                     onPressed: () {},
-                    child: const Text(
-                      'data',
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                    child: Text(
+                      storybrain.getChoice1(),
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
                 ),
@@ -87,9 +87,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.zero)),
                     onPressed: () {},
-                    child: const Text(
-                      'data',
-                      style: TextStyle(color: Colors.white, fontSize: 24),
+                    child: Text(
+                      storybrain.getChoice2(),
+                      style: const TextStyle(color: Colors.white, fontSize: 24),
                     ),
                   ),
                 ),
