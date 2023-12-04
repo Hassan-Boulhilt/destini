@@ -69,7 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         backgroundColor: Colors.red[600],
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.zero)),
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        storybrain.nextStory(1);
+                      });
+                    },
                     child: Text(
                       storybrain.getChoice1(),
                       style: const TextStyle(color: Colors.white, fontSize: 24),
@@ -77,19 +81,27 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               ),
-              Expanded(
-                flex: 1,
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.blue[600],
-                        shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.zero)),
-                    onPressed: () {},
-                    child: Text(
-                      storybrain.getChoice2(),
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+              Visibility(
+                visible: storybrain.buttonShouldBeVisible(),
+                child: Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.blue[600],
+                          shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.zero)),
+                      onPressed: () {
+                        setState(() {
+                          storybrain.nextStory(2);
+                        });
+                      },
+                      child: Text(
+                        storybrain.getChoice2(),
+                        style:
+                            const TextStyle(color: Colors.white, fontSize: 24),
+                      ),
                     ),
                   ),
                 ),
