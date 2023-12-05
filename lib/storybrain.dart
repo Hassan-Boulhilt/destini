@@ -65,16 +65,11 @@ class StoryBrain {
   }
 
   bool buttonShouldBeVisible() {
-    switch (_storyNumber) {
-      case 0:
-        return true;
-      case 1:
-        return true;
-      case 2:
-        return true;
-
-      default:
-        return false;
+    return switch (_storyNumber) {
+      0=>true;
+      1=>true;
+      3=>true;  
+      _=>false;    
     }
   }
 }
