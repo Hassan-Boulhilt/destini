@@ -68,7 +68,7 @@ class StoryBrain {
     return switch (_storyNumber) {
       0 => true,
       1 => true,
-      3 => true,
+      2 => true,
       _ => false,
     };
   }

@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Expanded(
-                flex: 4,
+                flex: storybrain.buttonShouldBeVisible() == false ? 6 : 5,
                 child: Center(
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -61,7 +61,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Expanded(
-                flex: 1,
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: TextButton(
@@ -76,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                     child: Text(
                       storybrain.getChoice1(),
-                      style: const TextStyle(color: Colors.white, fontSize: 24),
+                      style: const TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
                 ),
@@ -84,7 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
               Visibility(
                 visible: storybrain.buttonShouldBeVisible(),
                 child: Expanded(
-                  flex: 1,
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: TextButton(
@@ -100,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Text(
                         storybrain.getChoice2(),
                         style:
-                            const TextStyle(color: Colors.white, fontSize: 24),
+                            const TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),
                   ),
